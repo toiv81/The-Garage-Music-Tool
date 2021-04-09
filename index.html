@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UFT-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Garage Music Tool</title>
+<script src="NewPrompterByIvan.js"></script>
+<link rel="stylesheet" href="NewPrompterByIvan.css">
+</head>
+<body onload="iniziale()">
+  <img id="iconSpeed" src="img/mic2.jpg" alt="" onclick="about()" width="100"  />
+  <img id="iconSpeed2" src="img/electricguitartelecaster.jpg" alt="" onclick="about()" width="110" />
+<div class="main" id="section1">
+  
+  <p class="main" id = "titolo"> The Garage Music Tool</p>
+  
+  <label for="inputfile" class="bottoneFile"></label>
+  <input type="file" name="inputfile" id="inputfile" size="60"> 
+  
+  <label for="myRange" id="labelMyRange">Speed:</label>
+  <input id="myRange" type="range" value="125" min="1" max="250"/>
+  
+  <label for="fontSize" class="bottoneZoom"></label>
+  <button onclick="fontsize()" name="fontSize" id="fontSize">Zoom+/-
+  
+  
+  <button onclick="startCount()" name="buttonStart" id="buttonStart"> Start </button>
+  <label for="buttonStart" class="bottoneStart"></label>
+  <input type="text" id="txt">
+  
+  <label for="buttonStop" class="bottoneStop"></label>
+  <button onclick="stopCount()" name="buttonStop" id="buttonStop"> Stop </button>
+ 
+  <label for="colortext" class="coloretesto"></label>
+  <button onclick="colortext()" name="colortext" id="colortext"> T color </button>
+
+  <label for="colorbackgroundtext" class="colorebackgroundtesto"></label>
+  <button onclick="colorbackgroundtext()" name="colorbackgroundtext" id="colorbackgroundtext"> BG Color </button>
+  
+  
+
+
+  <!--the following script opens the files txt-->
+  <script type="text/javascript"> 
+
+  document.getElementById('inputfile') 
+  .addEventListener('change', function() { 
+    
+  var fr=new FileReader(); 
+  fr.onload=function(){ 
+      document.getElementById('output') 
+              .textContent=fr.result; 
+  } 
+    
+  fr.readAsText(this.files[0]); 
+  }) 
+  </script>
+
+</div>
+
+<div class="main3" id="section3">
+  <pre id="output"><br>Hello and welcome to The Garage Music Tool 2.0 by Ivan.
+               <br><br>Load a txt file to start!<br><br>Simple It does the job!<br>
+               <br>Prompt you Favourite Songs Tabs or Lyrics! <br><br><br><br><br><br><br><br>
+               <br><br><br><br><br><br><br><br><br><br><br></pre> 
+               <p>The End...</p>  
+</div>
+
+
+<div class="main2" id="section2">
+
+</div>
+
+</body>
+</html>
+
